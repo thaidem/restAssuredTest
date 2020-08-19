@@ -1,1 +1,11 @@
-/src/main/java/config/TestConfig.java
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
