@@ -11,6 +11,7 @@ public class Constans {
   public static class Servers {
     public static String SWAPI_URL = "https://swapi.dev/";
     public static String JASON_PLACEHOLDER_URL = "https://jsonplaceholder.typicode.com/";
+    public static String REQUEST_BIN_URL = "https://2d4f6b8cc1b874f75c2e3bd349212f65.m.pipedream.net";
     public static String GOOGLE_PLACES_URL;
   }
 
@@ -26,9 +27,10 @@ public class Constans {
     // google_places
 
     // json_holder
-    public static String JASON_PLACEHOLDER_GET_POST = "comments/";
-    public static String JASON_PLACEHOLDER_GET_PUT = "posts/1/";
-    public static String JASON_PLACEHOLDER_GET_DELETE = "posts/1/";
+    public static String JASON_PLACEHOLDER_GET = "comments/";
+    public static String JASON_PLACEHOLDER_PUT = "posts/1/";
+    public static String JASON_PLACEHOLDER_DELETE = "posts/1/";
+    public static String JASON_PLACEHOLDER_POST = "posts/";
 
 
   }
