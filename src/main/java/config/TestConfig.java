@@ -10,12 +10,15 @@ import io.restassured.specification.ResponseSpecification;
 import org.testng.annotations.BeforeClass;
 
 import static constans.Constans.Servers.REQUEST_BIN_URL;
+import static constans.Constans.Servers.SWAPI_URL;
 import static constans.Constans.runVariable.path;
 import static constans.Constans.runVariable.server;
 
 public class TestConfig {
 
-
+  protected RequestSpecification requestSpecificationForSwapi = new RequestSpecBuilder()
+          .setBaseUri(SWAPI_URL)
+          .build();
 
   protected RequestSpecification requestSpecificationXml = new RequestSpecBuilder()
           .addHeader("Content-Type", "application/json")
