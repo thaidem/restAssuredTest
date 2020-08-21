@@ -10,7 +10,7 @@ public class JsonPlaceHolderTest extends TestConfig {
   public void GET() {
     given().queryParam("postId", 1).log().uri().
     when().get(JASON_PLACEHOLDER_POST).
-    then().log().body().statusCode(200);
+    then().spec(responseSpecificationForGet).log().body();
   }
 
   @Test
@@ -25,7 +25,7 @@ public class JsonPlaceHolderTest extends TestConfig {
 
     given().body(putBodyJson).log().all().
     when().put(JASON_PLACEHOLDER_PUT).
-    then().log().body().statusCode(200);
+    then().spec(responseSpecificationForGet).log().body();
 
   }
 
@@ -47,7 +47,7 @@ public class JsonPlaceHolderTest extends TestConfig {
 
     given().body(postJasonbBody).log().all().
             when().post(JASON_PLACEHOLDER_POST).
-            then().log().body().statusCode(201);
+            then().spec(responseSpecificationForPost).log().body();
 
   }
 
@@ -70,7 +70,7 @@ public class JsonPlaceHolderTest extends TestConfig {
 
     given().spec(requestSpecificationXml).body(postXMLBody).log().all().
             when().post("").
-            then().log().body().statusCode(200);
+            then().spec(responseSpecificationForGet).log().body();
 
   }
 
