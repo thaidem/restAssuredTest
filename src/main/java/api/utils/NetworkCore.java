@@ -18,7 +18,7 @@ public class NetworkCore {
   public void sentRequestAndGetResponce(Method method, int code) {
     responce = given().spec(requestSpecBuilder.build()).log().uri().log().parameters()
             .when().request(method);
-    responce.then().assertThat().statusCode(code);
+    responce.then().log().body().assertThat().statusCode(code);
 
     try {
       responceBody = new JSONObject(responce.getBody().asString());
